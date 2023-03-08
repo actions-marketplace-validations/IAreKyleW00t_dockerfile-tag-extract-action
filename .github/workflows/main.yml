@@ -25,5 +25,5 @@ jobs:
         if: steps.tag.outputs.release_type == 'major' || steps.tag.outputs.release_type == 'minor'
         with:
           tag: ${{ steps.tag.outputs.new_tag }}
-          name: Release ${{ steps.tag.outputs.new_tag }}
+          name: ${{ steps.tag.outputs.new_tag }}
           body: ${{ steps.tag.outputs.changelog }}
