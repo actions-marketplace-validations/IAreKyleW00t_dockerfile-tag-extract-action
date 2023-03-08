@@ -26,8 +26,8 @@ jobs:
           MINOR=$(echo ${{ steps.tag.outputs.new_version }} | cut -d . -f 2)
           git tag -f v$MAJOR
           git tag -f v$MAJOR.$MINOR
-          git push -f -u origin ${GITHUB_REF##*/} v$MAJOR
-          git push -f -u origin ${GITHUB_REF##*/} v$MAJOR.$MINOR
+          git push -f -u origin v$MAJOR
+          git push -f -u origin v$MAJOR.$MINOR
 
       - name: Create a GitHub Release
         uses: ncipollo/release-action@v1
