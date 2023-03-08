@@ -1,0 +1,5 @@
+# Ignore everything
+*
+
+# except the entrypoint script
+!/entrypoint.sh

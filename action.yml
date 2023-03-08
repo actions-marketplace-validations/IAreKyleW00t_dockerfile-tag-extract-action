@@ -1,0 +1,19 @@
+name: Dockerfile Tag Extract Action
+author: Kyle Colantonio
+description: GitHub Action to extract the Tag of a base image inside a given Dockerfile
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.filename }}
+
+inputs:
+  filename:
+    description: Path to Dockerfile
+    default: Dockerfile
+    required: false
+
+outputs:
+  tags:
+    description: List of tags found inside the Dockerfile
