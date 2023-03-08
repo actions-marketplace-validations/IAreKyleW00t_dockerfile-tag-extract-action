@@ -1,6 +1,9 @@
 name: Dockerfile Tag Extract Action
 author: Kyle Colantonio
 description: GitHub Action to extract the Tag of a base image inside a given Dockerfile
+branding:
+  icon: anchor
+  color: blue
 
 runs:
   using: docker
